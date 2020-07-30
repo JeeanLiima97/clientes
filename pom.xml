@@ -41,6 +41,17 @@
 
 
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
 
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
