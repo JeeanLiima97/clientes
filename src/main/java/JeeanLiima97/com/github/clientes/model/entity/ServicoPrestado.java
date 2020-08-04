@@ -3,10 +3,12 @@ package JeeanLiima97.com.github.clientes.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Data
-public class Servico {
+public class ServicoPrestado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -18,5 +20,7 @@ public class Servico {
     private Cliente cliente;
 
     @Column
-    private double valor;
+    private BigDecimal valor;
+    @Column
+    private LocalDate data;
 }
