@@ -45,10 +45,17 @@ public class ServicoPrestadoController {
         return servicoPrestaadoRepository.save(servicoPrestado);
     }
 
+//    @GetMapping
+//    public List<ServicoPrestado> getAll() {
+//        return servicoPrestaadoRepository.findAll();
+//    }
+
     @GetMapping
-    public List<ServicoPrestado> getAll() {
-        return servicoPrestaadoRepository.findAll();
-    }
+    public List<ServicoPrestado> search(
+      @RequestParam(value = "nome", required = false, defaultValue = "") String nome,
+      @RequestParam(value = "mes", required = false) Integer mes){
+        return servicoPrestaadoRepository.findByNomeClienteAndMes("%"+nome+"%",mes);
+    };
 
 
 }
