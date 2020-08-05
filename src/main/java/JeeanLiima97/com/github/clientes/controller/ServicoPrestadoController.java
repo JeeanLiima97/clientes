@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/servicos-prestados")
+
 public class ServicoPrestadoController {
 
     @Autowired
